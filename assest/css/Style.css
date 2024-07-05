@@ -1,0 +1,1021 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style-type: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+:root {
+  --green-color: #27ae60;
+  --light-color: #666;
+  --purple-color: #192a56;
+  --yellowish-color: #ffc107;
+  --blue-color: #130f40;
+  --White-color: #fff;
+  --box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  --primary-color: #f1eaea;
+  --secondry-color: #000;
+  --main-color: #410356;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+h2,
+h4 {
+  font-size: 2.5rem;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h2 {
+  margin: 4rem auto;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 2rem;
+  text-transform: none;
+}
+
+span {
+  font-size: 3rem;
+  color: var(--yellowish-color);
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-size: 2.3rem;
+  line-height: 4rem;
+  color: #4e4949;
+}
+
+#button,
+#submitBtn {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  width: 20rem !important;
+  height: 6rem !important;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 7px;
+  border: 0;
+  color: #fff;
+  background: var(--yellowish-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex; justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#button::after,
+#submitBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellowish-color);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+#button:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+/* ============================================== HEADER STYLING ==================================================== */
+header {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 6%;
+  box-shadow: 0px 2px 6px rgba(0 0 0 /100%);
+  z-index: 100%;
+  width: 100%;
+}
+
+header .logo img {
+  height: 80px;
+  width: 100px;
+}
+
+header .navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+header .navbar a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--purple-color);
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+header .navbar a:is(:link, :active, :visited).active {
+  background-color: var(--yellowish-color);
+  color: #fff;
+}
+
+header .navbar a:hover {
+  background-color: #fcf8f8;
+}
+
+i {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+header #menu-bars {
+  display: none;
+}
+
+/* ===================================================== LOGIN SECTION   ==================================== */
+.login {
+  position: absolute;
+  top: 20%;
+  height: auto;
+  width: 50%;
+  text-align: center;
+  padding-top: 2vh;
+  background-color: #cdcdcd;
+}
+
+.errorMsg {
+  color: #ff0000;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.hide {
+  display: none;
+}
+
+.login input {
+  width: 90%;
+  height: 6rem;
+  margin: 1rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #cac7c7;
+  text-transform: none;
+  border-radius: 7px;
+}
+
+.login .login-btn {
+  width: 60%;
+  height: 60px;
+  display: flex;
+  margin: 4rem auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #517ce9;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* ============================================== MAIN STYLING ========================================= */
+
+main {
+  margin-top: 8%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Home section styling  all webpages */
+.banner-container #banner {
+  height: 50vh;
+}
+
+.banner-container #banner .banner-image {
+  height: 300px;
+  margin-right: 0;
+}
+
+/* about section styling */
+#about img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* service section styling */
+.box {
+  box-shadow: 0px 2px 6px rgba(0 0 0 /20%);
+  transition: .4s ease;
+  width: 25rem;
+  height: 20rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.box:hover {
+  background-color: var(--yellowish-color);
+}
+
+#service-icons {
+  width: 8rem;
+  height: 8rem;
+  line-height: 8rem;
+  border-radius: 50%;
+  font-size: 3rem;
+}
+
+/* Invitation Card Section Styling */
+.Invitaion-image-Holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#Invitaion-container .Invitaion-image-Holder img {
+  height: 20rem;
+  width: 15rem !important;
+  border: 1px solid #000;
+  object-fit: cover;
+  margin: 1rem;
+}
+
+.image-box-holder {
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  border: 1px solid #000;
+  padding: 0;
+}
+
+.image-box-holder .image-box {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* contact styling */
+
+#contact-container {
+  height: 70vh;
+}
+.contact form {
+  height: auto;
+  width: 60rem;
+  text-align: center;
+}
+.heading {
+  font-size: 3rem !important;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+.contact form .input-box .feild input {
+  border: 1px solid #1c76c0 !important;
+  width: 90%;
+  height: 5rem;
+  font-size: 1.9rem;
+  margin: 1%;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+ .feild .error-txt{
+  font-size: 16.5px;
+  color: #ff0000;
+ text-align: center;
+  margin: -5px 0px 10px;
+  
+ }
+ .feild .item::placeholder{
+  color:rgba( 225 , 225 ,225 , .2);
+ }
+
+/* customer review */
+#review .customer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#review .customer .customer-content {
+  box-shadow: 0px 2px 6px rgba(0 0 0 /50%);
+  height: auto;
+  width: 39rem;
+  padding: 1rem;
+  margin: 1rem;
+  transition: transform .3s ease;
+  text-align: center;
+}
+
+#star {
+  color: var(--yellowish-color);
+}
+
+#review .customer .customer-content:hover {
+  transform: translateY(-2rem);
+}
+
+#review .customer .customer-content .profile-image img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#review .customer .customer-content .profile-image img:hover {
+  transform: scale(1.1);
+}
+
+/* footer styling */
+.footer {
+  height: auto;
+  padding: 5%;
+  box-shadow: 0px 2px 6px rgba(0 0 0 /100%);
+  margin: 0;
+  width: 100%;
+  margin-top: 10%;
+
+}
+
+.footer-heading {
+  font-size: 2.9rem !important;
+}
+
+.footer i {
+  font-size: 1px !important;
+}
+
+.footer ul li a {
+  font-size: 2.2rem !important;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Subscribe-button {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #130f40;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.social .social-icons {
+  font-size: 3rem !important;
+  margin: 0 4px;
+  background-color: #1410ee;
+  border: 1px solid #1410ee;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all .6s ease;
+}
+
+.social-icons:hover {
+  transform: rotate(360deg);
+}
+
+input.input {
+  border: 0.3rem solid var(--blue-color) !important;
+  color: var(--secondry-color);
+  margin: 3rem auto;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem !important;
+  text-align: center;
+  height: 4.5rem;
+  font-size: 1.7rem;
+  text-transform: none;
+}
+
+.input:focus {
+  background: #fff;
+  outline: 0;
+}
+
+/* =========================================== pages styling ============================================== */
+
+/*   =====================================  about  page styling  ========================================= */
+
+/* team styling */
+.testimonals {
+  padding: 5rem 0rem 8rem;
+}
+
+.testimonals .testimonals-wrapper {
+  padding: 1rem 5rem;
+  margin: auto;
+  width: 100%;
+  height: 70rem;
+  background-color: white;
+  border: 0.45rem solid #000;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+}
+
+.testimonals-wrapper img {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+}
+
+.cust-info span {
+  text-transform: none;
+  font-size: 4rem !important;
+  color: #130f40;
+
+}
+
+.testimonals .carousel-indicators [data-bs-target] {
+  width: 6rem;
+  height: .6rem;
+  background-color: #130f40;
+}
+
+.cust-info {
+  font-size: 2rem;
+}
+
+.testimonals .slider-icon {
+  font-size: 4rem;
+}
+
+.boxWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 0.5rem;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.boxWrapper .inner-box {
+  padding: 0;
+  position: relative;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 45rem;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+/* gallery section start */
+#gallery .boxWrapper .inner-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#gallery .boxWrapper .inner-box:hover img {
+  transform: scale(1.1);
+}
+
+
+/* venues styling */
+.venue-hero-section img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.venue-box {
+  position: relative;
+  padding: 0;
+  height: 25rem;
+}
+
+.venue-box img {
+  height: 100%;
+  width: 100%;
+}
+
+.venue-box .venue-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 40rem;
+  height: 40rem;
+}
+
+.venue-box:hover .venue-info {
+  opacity: 1;
+}
+
+/* vendor  page */
+.vendor-card {
+  width: 100% !important;
+  height: 70rem !important;
+  margin: 1rem;
+  padding: 2%;
+}
+
+.vendor-card p {
+  font-size: 2rem;
+}
+
+.card-image-top {
+  height: 35rem !important;
+  width: 100%;
+  margin-bottom: 1.6rem;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--blue-color);
+  font-size: 2.2rem;
+  margin: .2rem;
+
+}
+
+.vendors-price {
+  color: #ff0000;
+  font-size: 3rem !important;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries for responsiveness */
+@media (min-width: 1024px),
+(max-width: 1280px) {
+  p {
+    margin: 2rem;
+    margin-top: 5%;
+    padding: 4%;
+    font-size: 2.5rem;
+  }
+
+  #Invitaion-container .Invitaion-image-Holder img {
+    height: 15rem;
+    width: 8.5rem !important;
+  }
+
+
+}
+
+/* Adjustments for screens 991px and below */
+@media only screen and (min-width: 820px) and (max-width: 991px) {
+  html {
+    font-size: 55%
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  /* Customer Adjustment */
+  #review .customer .customer-content p {
+    font-size: 2.5rem;
+  }
+
+  #review .customer .customer-content i {
+    font-size: 2.4rem !important;
+  }
+
+  /* Invitation  adjustment */
+  #Invitaion-container .Invitaion-image-Holder img {
+    height: 15rem;
+    width: 8rem !important;
+    margin: .4rem;
+  }
+
+  /* service adjustment */
+  .box{
+  width: 24rem;
+  }
+  .box h4 {
+    font-size: 3rem;
+  }
+
+  #service-icons {
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 5rem;
+  }
+
+  /* footer section  adjustments */
+  .footer-heading {
+    font-size: 3.9rem !important;
+  }
+
+  .footer ul li a {
+    font-size: 2.8rem !important;
+  }
+}
+
+/* Adjustments for screens 768px and below */
+
+@media (max-width:768px) {
+
+  p {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  #button {
+    width: 15rem !important;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  /*  header adjustment */
+  header .navbar {
+    gap: .5rem;
+  }
+
+  header .navbar a {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* service adjustment */
+  .box {
+    width: 21rem;
+    padding: 2rem;
+  }
+
+  .box h4 {
+    font-size: 2.3rem !important;
+  }
+
+  /* Event adjustment */
+  .column h2 {
+    font-size: 2rem !important;
+  }
+  /*  Invitation card Adjustment  */ 
+  #Invitaion-container .Invitaion-image-Holder img {
+    width: 80% !important;  
+    height: 20rem;
+    margin: .2 !important;
+  }
+  /* Customer adjusment */
+  #review .customer .customer-content {
+    width: 30rem;
+  }
+
+  #review .customer .customer-content i {
+    font-size: 2rem !important;
+  }
+
+  #review .customer .customer-content .like {
+    margin-top: 0;
+  }
+
+  #review .customer .customer-content .profile-image img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  /* footer section  adjustments */
+  .footer-heading {
+    font-size: 3rem;
+  }
+
+  /* venue   page  */
+  .boxWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  .boxWrapper .inner-box {
+    height: 35rem !important;
+  }
+
+  /* vendor adjustment */
+  .vendorContainer {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .vendor-card {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .vendor-card h5 {
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+  }
+
+  .vendor-card h3 {
+    font-size: 2rem !important;
+  }
+
+  .vendor-card p {
+    font-size: 1.5rem !important;
+  }
+}
+
+
+
+@media (max-width:576px) {
+  main {
+    margin-top: 30%;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  /* header adjustment */
+  header .navbar {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    right: -100%;
+    padding: .5rem;
+    width: 40%;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+    background-color: var(--white-color);
+    z-index: 99;
+    transition: clip-path 0.4s ease, background-color 0.4s ease;
+    background-color: var(--blue-color);
+  }
+
+  header .navbar a:is(:link, :active, :visited).active {
+    background: transparent;
+    color: var(--yellowish-color);
+  }
+
+  header .navbar.active {
+    display: block;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block !important;
+    padding: .5rem;
+    font-size: 3rem;
+    margin: 0rem;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    color: var(--purple-color);
+    transition: background-color 0.4s ease;
+    width: 100%;
+    color: #fff;
+  }
+
+  header .navbar a:hover {
+    background-color: transparent;
+    color: #cdcdcd;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  header .nav-icons #menu-bars {
+    display: inline-block;
+  }
+
+  /* service adjustment */
+  .box {
+    width: 15rem;
+    height: 18rem;
+    margin: .5rem;
+    padding: 1rem;
+  }
+
+  .box h4 {
+    font-size: 1.8rem !important;
+  }
+
+  #service-icons {
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    font-size: 3rem;
+  }
+
+  /* Invitation card Adjustment  */
+  #Invitaion-container .Invitaion-image-Holder img {
+    width: 8rem !important;
+    height: 15rem;
+  }
+
+  /* vendor adjustment */
+  .vendorContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .vendor-card {
+    width: 85% !important;
+    margin: 1rem;
+  }
+
+  .vendor-card .card-title {
+    font-size: 2.5rem;
+  }
+
+  .vendor-card p {
+    font-size: 1.9rem;
+  }
+
+  /* venue adjustent */
+  .boxWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .boxWrapper .inner-box {
+    height: 40rem !important;
+  }
+
+   /* contact adjustment */
+   .contact form .input-box .feild input {
+    width: 80%;
+  }
+  
+}
+
+@media (min-width:320px) and (max-width:430px) {
+   /* home heading */
+   .home-heading{
+    margin-top: 50% !important;
+   }
+   #button,
+    #submitBtn {
+  width: 15rem !important;
+  height: 4rem !important;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 7px;
+  border: 0;
+  color: #fff;
+  background: var(--yellowish-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex; justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+
+  /* service adjustment */
+  .box {
+    width: 80%;
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .box h4 {
+    font-size: 3rem !important;
+    font-weight: 900;
+  }
+
+  /* Event  Cards */
+  .column {
+    width: 80% !important;
+    height: 100%;
+  }
+
+  .column h2 {
+    font-size: 2.8rem !important;
+  }
+
+  /* Customer */
+  #review   {
+    padding-top: 10% !important;
+  }
+  #review .customer .customer-content {
+    width: 32rem !important;
+  }
+
+  #review .customer .customer-content strong {
+    font-size: 2rem !important;
+  }
+
+  /* Invitation card Adjustment  */
+  #Invitaion-container .Invitaion-image-Holder img {
+    width: 8rem !important;
+    height: 10rem;
+  }
+
+  .image-box-holder {
+    width: 20rem !important;
+  }
+
+  /* about   team adjustment */
+  .testimonals .testimonals-wrapper {
+    width: 80%;
+    height: 47rem;
+  }
+  .cust-info span {
+    font-size: 2rem !important;
+    color: var(--yellowish-color);
+  }
+
+  .testimonals .carousel-indicators [data-bs-target] {
+    width: 5rem;
+    height: .4rem;
+    background-color: #130f40;
+  }
+
+  .cust-info {
+    font-size: 2rem;
+  }
+
+  .testimonals .slider-icon {
+    font-size: 5rem;
+    color: #130f40;
+    ;
+  }
+
+  .testimonals-wrapper img {
+    width: 20rem;
+    height: 20rem;
+
+  }
+
+  /* contact form adjutment */
+  .contact form {
+    width: 40rem;
+    text-align: center;
+  }
+
+  .contact form .input-box .feild input {
+    border: 1px solid #1c76c0 !important;
+    width: 90%;
+    height: 5rem;
+    font-size: 1.9rem;
+    margin: 1%;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+
+}
